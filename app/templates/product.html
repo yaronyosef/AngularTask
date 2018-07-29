@@ -1,0 +1,23 @@
+<h1>App</h1>
+<div id="container" >
+	<!-- two lists can be reused as they are very similar -->
+	<div>
+		catalog
+		<label ng-repeat="item in vm.data.catalog">
+				<input type="checkbox" ng-model="item.check" ng-change="vm.mark(item)">
+				{{item.name}}
+				<span class="badge">{{item.id}}</span>
+		</label>
+	</div>
+
+	<div>
+		order history
+		<label ng-repeat="item in vm.data.history">
+			<input type="checkbox" ng-model="item.check">
+			{{item.name}}
+			<span class="badge">{{item.id}}</span>
+		</label>
+	</div>
+</div>
+
+<button ng-click="vm.addToCart()">Add to cart</button>
