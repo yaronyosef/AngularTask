@@ -1,0 +1,4 @@
+git clone https://github.com/yaronyosef/AngularTask.git
+cd AngularTask
+npm install -g lite-server
+lite-server
